@@ -2,6 +2,10 @@
 ## functions do
 
 ## Write a short comment describing this function
+## makeCacheMatrix(): create an augmented matrix object that caches its
+##   inverse.
+## return a list of set/get/setsolve/getsolve functions to manipulate it
+## cache inverted matrix
 
 makeCacheMatrix <- function(x = matrix()) {
   m <- NULL
@@ -20,6 +24,10 @@ makeCacheMatrix <- function(x = matrix()) {
 
 
 ## Write a short comment describing this function
+## cacheSolve(): invert a matrix, and cache its values. The next time the 
+##   matrix request inversion, it cache value will be returned.
+## return the inverted matrix as normal
+## this function should be called with a special matrix return by makeCacheMatrix()
 
 cacheSolve <- function(x, ...) {
   ## Return a matrix that is the inverse of 'x'
